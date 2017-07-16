@@ -13,10 +13,10 @@ for filename in os.listdir('.'):
 
         for idx, line in enumerate(lines):
             if '../style.css' in line:
-                lines[idx] = line.replace('../style.css', './style.css')
+                lines[idx] = line.replace('../style.css', 'https://raw.githubusercontent.com/iliavolyova/albums/master/style.css')
                 index = idx
 
-        lines.insert(index, '<script type="text/javascript" src="./script.js"></script>\n')
+        lines.insert(index, '<script type="text/javascript" src="https://raw.githubusercontent.com/iliavolyova/albums/master/script.js"></script>\n')
         f.close()
         
         f = open(filename, 'w');
