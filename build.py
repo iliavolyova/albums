@@ -16,7 +16,7 @@ for filename in os.listdir('.'):
                 lines[idx] = line.replace('../style.css', './style.css')
                 index = idx
 
-        lines.insert(index, '<script type="text/javascript" src="./script.js"/>\n')
+        lines.insert(index, '<script type="text/javascript" src="./script.js"></script>\n')
         f.close()
         
         f = open(filename, 'w');
